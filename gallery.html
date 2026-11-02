@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Artist Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .masonry-grid {
+            column-count: 3;
+            column-gap: 30px;
+            padding: 20px;
+        }
+        @media (max-width: 992px) { .masonry-grid { column-count: 2; } }
+        @media (max-width: 600px) { .masonry-grid { column-count: 1; } }
+
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 30px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .masonry-item .frame:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 15px rgba(248, 200, 176, 0.6); /* Peach glow */
+            border-color: var(--soft-lavender);
+        }
+        .masonry-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="notebook-bg"></div>
+    
+    <nav class="navbar">
+        <div class="nav-brand">My Sketchbook</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="gallery.html" class="active">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header" style="text-align: center; padding: 60px 20px 20px;">
+        <h1 class="hero-title" style="transform: rotate(-1deg);">Gallery</h1>
+        <p class="hero-subtitle">A collection of my scribbles, splashes, and sketches.</p>
+        <div class="brush-stroke" style="margin: 0 auto; width: 150px; height: 10px; background: var(--soft-lavender); border-radius: 50%; opacity: 0.5;"></div>
+    </header>
+
+    <section>
+        <div class="masonry-grid">
+            <!-- Item 1 -->
+            <div class="masonry-item card-wobble-1">
+                <div class="frame">
+                    <img src="assets/doodles_1773651370154.png" alt="Artwork 1">
+                </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="masonry-item">
+                <div class="frame">
+                    <img src="assets/doodles_1773651370154.png" style="height: 400px; object-fit: cover;" alt="Artwork 2">
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="masonry-item card-wobble-2">
+                <div class="frame">
+                    <img src="assets/doodles_1773651370154.png" alt="Artwork 3">
+                </div>
+            </div>
+            <!-- Item 4 -->
+            <div class="masonry-item card-wobble-3">
+                <div class="frame">
+                    <img src="assets/doodles_1773651370154.png" style="height: 350px; object-fit: cover;" alt="Artwork 4">
+                </div>
+            </div>
+             <!-- Item 5 -->
+            <div class="masonry-item card-wobble-1">
+                <div class="frame">
+                    <img src="assets/doodles_1773651370154.png" alt="Artwork 5">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Full Artwork View -->
+    <div id="artwork-modal" style="display: none; position: fixed; inset: 0; background: rgba(244, 239, 234, 0.95); z-index: 1000; justify-content: center; align-items: center; cursor: zoom-out;">
+        <div class="frame" style="max-width: 80%; max-height: 80vh; transform: rotate(1deg);">
+            <img id="modal-img" src="" alt="Full Artwork" style="height: auto; max-height: 70vh;">
+            <p style="text-align: center; margin-top: 10px; font-family: var(--font-heading);">"Untitled Scribble"</p>
+        </div>
+        <div style="position: absolute; top: 30px; right: 40px; font-size: 40px; font-family: var(--font-heading); font-weight: bold;">✕</div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h2 class="footer-brand">My Sketchbook</h2>
+            <p>&copy; 2026 Crafted with ♥ and lots of pencils.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Modal Logic
+        const modal = document.getElementById('artwork-modal');
+        const modalImg = document.getElementById('modal-img');
+        const masonryItems = document.querySelectorAll('.masonry-item img');
+
+        masonryItems.forEach(img => {
+            img.addEventListener('click', () => {
+                modalImg.src = img.src;
+                modal.style.display = 'flex';
+            });
+        });
+
+        modal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    </script>
+</body>
+</html>

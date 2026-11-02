@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Artist Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .storybook-container {
+            background: #FFF;
+            border: 2px solid var(--charcoal);
+            border-radius: 5px 30px 5px 30px;
+            box-shadow: 10px 10px 0 var(--soft-lavender);
+            padding: 60px 80px;
+            max-width: 900px;
+            margin: 40px auto;
+            position: relative;
+        }
+        .storybook-container::before {
+            content: '✎';
+            position: absolute;
+            top: 20px; right: 40px;
+            font-size: 30px; color: var(--peach);
+            transform: rotate(45deg);
+        }
+        .blog-banner {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border: 2px dashed var(--charcoal);
+            border-radius: var(--doodle-border);
+            margin-bottom: 40px;
+            filter: sepia(0.2);
+        }
+        .blog-content p {
+            margin-bottom: 20px;
+            line-height: 1.8;
+            font-size: 20px;
+        }
+        .blog-content h2 {
+            margin: 40px 0 20px;
+            font-size: 30px;
+        }
+        
+        .margin-doodle {
+            position: absolute;
+            font-size: 40px;
+            opacity: 0.6;
+        }
+        .md-1 { left: -60px; top: 100px; transform: rotate(-15deg); }
+        .md-2 { right: -50px; top: 300px; transform: rotate(20deg); }
+        .md-3 { left: -40px; bottom: 200px; transform: rotate(10deg); }
+
+        @media (max-width: 768px) {
+            .storybook-container { padding: 30px 20px; }
+            .margin-doodle { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="notebook-bg"></div>
+    
+    <nav class="navbar">
+        <div class="nav-brand">My Sketchbook</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html" class="active">Blog</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="storybook-container">
+        <!-- Decorative Margin Doodles -->
+        <div class="margin-doodle md-1">🖌️</div>
+        <div class="margin-doodle md-2">📎</div>
+        <div class="margin-doodle md-3">〰️</div>
+
+        <img src="assets/doodles_1773651370154.png" alt="Blog Banner" class="blog-banner">
+        
+        <header style="margin-bottom: 30px; text-align: center;">
+            <span class="category-tag">Techniques</span>
+            <h1 class="hero-title" style="transform: rotate(1deg); font-size: 48px;">The Magic of Watercolors</h1>
+            <p style="color: gray; font-family: var(--font-heading);">March 16, 2026 • 5 min read</p>
+        </header>
+
+        <div class="blog-content">
+            <p>Welcome to another page in my sketchbook! Today, we're diving into the unpredictable, beautifully chaotic world of watercolors. Unlike pencils or markers, watercolor has a mind of its own. It flows where the water takes it.</p>
+            
+            <h2>Embracing the Mistakes</h2>
+            <p>One of the first things you learn is that you can't control everything. Sometimes the colors bleed together perfectly, and sometimes they create a muddy mess. But that's exactly where the magic happens.</p>
+            
+            <div style="padding: 20px; border-left: 4px solid var(--peach); margin: 30px 0; font-family: var(--font-heading); font-size: 24px; color: var(--charcoal); background: rgba(248, 200, 176, 0.2);">
+                "Let the water do the work, you are just there to guide it."
+            </div>
+            
+            <p>I usually start out by dropping clean water onto my cold-pressed paper, just creating random shapes. Then, I tap a loaded brush of Ultramarine Blue and watch it crawl across the wet surface. It's mesmerizing.</p>
+            
+            <p>Thanks for reading! Keep your brushes wet and your imagination dry. Wait, no, the other way around.</p>
+        </div>
+        
+        <div style="margin-top: 50px; text-align: center; border-top: 2px dashed var(--charcoal); padding-top: 30px;">
+            <a href="index.html" class="cta-btn secondary">Back to Home</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-content">
+            <h2 class="footer-brand">My Sketchbook</h2>
+            <p>&copy; 2026 Crafted with ♥ and lots of pencils.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

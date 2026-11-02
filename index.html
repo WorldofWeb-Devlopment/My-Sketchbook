@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Portfolio & Blog</title>
+    <meta name="description" content="A creative journey through stories, sketches, and imagination.">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background overlay for notebook texture -->
+    <div class="notebook-bg"></div>
+    
+    <!-- Floating Doodles Container -->
+    <div class="doodles-container" id="doodles-container">
+        <!-- Doodles will be injected via JS or CSS backgrounds -->
+    </div>
+
+    <!-- Sticky Navigation -->
+    <nav class="navbar">
+        <div class="nav-brand">My Sketchbook</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Portfolio</h1>
+            <p class="hero-subtitle">A creative journey through stories, sketches, and imagination.</p>
+            <a href="gallery.html" class="cta-btn">Explore Gallery <span class="arrow-doodle">↘</span></a>
+        </div>
+        <div class="hero-image-wrapper">
+            <img src="assets/hero_artist_1773651212651.png" alt="Artist character drawing" class="hero-artist-img">
+        </div>
+    </header>
+
+    <!-- Sketch Style Section Divider -->
+    <div class="section-divider">
+        <svg viewBox="0 0 1000 50" preserveAspectRatio="none">
+            <path d="M0,25 Q250,5 500,25 T1000,25" fill="none" stroke="#C8A2D8" stroke-width="4" stroke-dasharray="10 5" class="hand-drawn-line"></path>
+            <path d="M0,35 Q250,15 500,35 T1000,35" fill="none" stroke="#F8C8B0" stroke-width="3" stroke-dasharray="15 10" class="hand-drawn-line"></path>
+        </svg>
+    </div>
+
+    <!-- Featured Artwork Section -->
+    <section class="featured-artwork">
+        <h2 class="section-title">Featured Sketches</h2>
+        <div class="artwork-grid">
+            <div class="artwork-card card-wobble-1">
+                <div class="frame">
+                    <img src="assets/doodles_1773651370154.png" alt="Artwork 1">
+                </div>
+            </div>
+            <div class="artwork-card card-wobble-2">
+                <div class="frame">
+                    <img src="assets/doodles_1773651370154.png" alt="Artwork 2">
+                </div>
+            </div>
+            <div class="artwork-card card-wobble-3">
+                <div class="frame">
+                    <img src="assets/doodles_1773651370154.png" alt="Artwork 3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Artist Introduction Section -->
+    <section class="artist-intro">
+        <div class="intro-container">
+            <div class="intro-image">
+                <div class="frame portrait-frame">
+                    <img src="assets/hero_artist_1773651212651.png" alt="Artist Portrait">
+                </div>
+                <div class="floating-decorator star">✨</div>
+                <div class="floating-decorator splash">🎨</div>
+            </div>
+            <div class="intro-text">
+                <h2 class="section-title">Hi, I'm the Artist!</h2>
+                <p>Welcome to my digital sketchbook. Every line, color, and doodle you see here is a piece of my imagination coming to life. Grab a pencil and join me on this journey!</p>
+                <a href="about.html" class="cta-btn secondary">Read My Story</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="latest-blogs">
+        <h2 class="section-title">Latest Stories</h2>
+        <div class="blog-grid">
+            <article class="blog-card sticky-note note-yellow">
+                <div class="blog-thumbnail">
+                    <img src="assets/doodles_1773651370154.png" alt="Blog 1">
+                </div>
+                <h3 class="blog-title">The Magic of Watercolors</h3>
+                <span class="category-tag">Techniques</span>
+                <p class="blog-desc">Exploring how water and pigment dance on paper to create unpredictable beauty.</p>
+                <a href="blog.html" class="read-more">Read Page ↗</a>
+            </article>
+            <article class="blog-card sticky-note note-pink">
+                <div class="blog-thumbnail">
+                    <img src="assets/doodles_1773651370154.png" alt="Blog 2">
+                </div>
+                <h3 class="blog-title">Finding Inspiration Everywhere</h3>
+                <span class="category-tag">Thoughts</span>
+                <p class="blog-desc">Why that coffee stain on your desk might be your next masterpiece.</p>
+                <a href="blog.html" class="read-more">Read Page ↗</a>
+            </article>
+            <article class="blog-card sticky-note note-blue">
+                <div class="blog-thumbnail">
+                    <img src="assets/doodles_1773651370154.png" alt="Blog 3">
+                </div>
+                <h3 class="blog-title">My Favorite Sketching Tools</h3>
+                <span class="category-tag">Tools</span>
+                <p class="blog-desc">A deep dive into the pencils, pens, and paper that I use daily.</p>
+                <a href="blog.html" class="read-more">Read Page ↗</a>
+            </article>
+        </div>
+    </section>
+
+    <!-- Creative Quote Section -->
+    <section class="quote-section">
+        <div class="quote-box">
+            <p class="quote-text">"Art is where imagination learns to breathe."</p>
+            <div class="doodle-star star-left">⭐</div>
+            <div class="doodle-star star-right">⭐</div>
+            <div class="brush-stroke"></div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-doodles">
+            <div class="sketch-line"></div>
+        </div>
+        <div class="footer-content">
+            <h2 class="footer-brand">My Sketchbook</h2>
+            <div class="social-links">
+                <a href="#" class="social-icon hand-drawn-icon">Ig</a>
+                <a href="#" class="social-icon hand-drawn-icon">Tw</a>
+                <a href="#" class="social-icon hand-drawn-icon">Be</a>
+            </div>
+            <p>&copy; 2026 Crafted with ♥ and lots of pencils.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
